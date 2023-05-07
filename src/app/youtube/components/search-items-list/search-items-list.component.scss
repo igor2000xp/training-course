@@ -1,0 +1,17 @@
+:host {
+  margin: 0 auto;
+}
+
+.search-result-wrapper {
+  display: flex;
+  margin: 10px auto 0;
+  max-width: 1280px;
+  padding: 0 40px;
+}
+
+.search-result {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}

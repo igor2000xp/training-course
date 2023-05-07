@@ -1,0 +1,63 @@
+<div class="login">
+  <h4>Create new card</h4>
+  <form class="login-form" [formGroup]="formGroup" (submit)="onCreate()">
+      <div class="login-field">
+          <label>Title</label>
+          <input type="text" formControlName="title">
+          <div class='error'  *ngIf="title.hasError('required') && title.touched">
+            Please enter a title
+          </div>
+          <div class='error' *ngIf="title.hasError('minlength') && title.touched" >
+            The title is too short
+          </div>
+          <div class='error' *ngIf="title.hasError('maxlength') && description.touched">
+            The title is too long
+          </div>
+      </div>
+      <div class="login-field">
+          <label>Description</label>
+          <input type="text" formControlName="description">
+          <div class='error' *ngIf="description.hasError('maxlength') && description.touched">
+            The description is too long
+          </div>
+      </div>
+      <div class="login-field">
+        <label>img</label>
+        <input type="url" formControlName="imgLink">
+        <div class='error' *ngIf="imgLink.hasError('required') && imgLink.touched">
+          Please enter a link to the image
+        </div>
+        <div class='error' *ngIf="imgLink.hasError('pattern') && imgLink.touched">
+          The image link is invalid
+        </div>
+    </div>
+    <div class="login-field">
+      <label>Link video</label>
+      <input type="url" formControlName="videoLink">
+      <div class='error' *ngIf="videoLink.hasError('required') && videoLink.touched">
+        Please enter a link to the video
+      </div>
+      <div class='error' *ngIf="videoLink.hasError('pattern') && videoLink.touched">
+        The video link is invalid
+      </div>
+    </div>
+    <div class="login-field">
+      <label>Date</label>
+      <input type="date" formControlName="date">
+      <div class='error' *ngIf="date.hasError('required') && date.touched">
+        Please enter a creation date
+      </div>
+      <div class='error' *ngIf="date.hasError('date') && date.touched">
+        The date is invalid
+      </div>
+    </div>
+      <div class="login-controls">
+        <button
+            mat-raised-button
+            color="primary"
+            type="submit">
+            Create card
+        </button>
+    </div>
+  </form>
+

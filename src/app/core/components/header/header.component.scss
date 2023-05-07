@@ -1,0 +1,55 @@
+@import "../../../../themes/variables.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background-color: $background-color;
+  font-size: 16px;
+}
+
+.controls {
+  width: 100%;
+}
+
+.control-panel {
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-logo {
+  display: flex;
+  margin-left: auto;
+  width: 50px;
+}
+
+#main-search-input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  min-width: 300px;
+  padding-left: 10px;
+  background-color: $background-light-color;
+}
+
+#setting-btn {
+  min-width: 30px;
+  height: 30px;
+  padding: 3px 0 0 0;
+  margin-left: 15px;
+  line-height: 100%;
+  box-shadow: none;
+}

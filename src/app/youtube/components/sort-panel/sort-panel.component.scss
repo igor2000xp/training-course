@@ -1,0 +1,31 @@
+
+@import "../../../../themes/variables.scss";
+
+:host {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0 20px;
+  background-color: $background-color;
+
+    div {
+      display: flex;
+      gap: 20px;
+    }
+}
+
+span {
+  color: #929292;
+}
+
+#filter-input {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.sort-type {
+  color: $primary-color;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<span>Sorting by:</span>
+<div>
+  <span class="sort-type" (click)="setFilter(filtersMap.date)">date</span>
+  <span class="sort-type" (click)="setFilter(filtersMap.view)">count of views</span>
+  <span class="sort-type" (click)="setKeyWord(this.input)">by word or sentence</span>
+</div>
+<input id="filter-input" placeholder={{actualFilterSettings.placeholder}} #input />
+

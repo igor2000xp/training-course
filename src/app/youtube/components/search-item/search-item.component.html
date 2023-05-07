@@ -1,0 +1,16 @@
+<div class="card" *ngIf="item" [appBorderColorByDate]="item.snippet.publishedAt">
+  <div>
+      <img class="card-thumbnail" [src]="item.snippet.thumbnails.medium.url" alt="thumbnail">
+      <div class="card-info">
+        <app-item-stats
+                *ngFor="let stat of stats"
+                [value]="stat.value"
+                [icon]="stat.icon">
+            </app-item-stats>
+      </div>
+  </div>
+  <div class="card-title">
+      <h4 id="card-title">{{title}}</h4>
+  </div>
+  <button mat-raised-button color="primary" id="more-btn" (click)="goToDetails()">more...</button>
+</div>

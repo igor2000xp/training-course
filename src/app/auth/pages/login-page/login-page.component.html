@@ -1,0 +1,34 @@
+<div class="login" *ngIf="form">
+  <h4>Login</h4>
+  <form [formGroup]="form" class="login-form" (submit)="onSubmit()">
+      <div class="login-field">
+          <label>login</label>
+          <input type="email" formControlName="userEmail">
+          <div class='error' *ngIf="userEmail.hasError('email') && userEmail.touched">
+            The login email is invalid
+          </div>
+          <div class='error' *ngIf="userEmail.hasError('required') && userEmail.touched">
+            Please enter a login email
+          </div>
+      </div>
+      <div class="login-field">
+          <label>password</label>
+          <input type="password" formControlName="userPassword">
+          <div class='error' *ngIf="userPassword.hasError('required') && userPassword.touched">
+            Please enter a password
+          </div>
+          <div class='error'*ngIf="userPassword.hasError('passRec')">
+            Your password isn't strong enough ({{userPassword.errors!['passRec']}})
+          </div>
+      </div>
+      <div class="login-controls">
+        <button mat-button color="primary" routerLink="reg">Registration</button>
+        <button
+            mat-raised-button
+            color="primary"
+            type="submit">
+            Login
+        </button>
+    </div>
+  </form>
+

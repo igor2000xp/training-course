@@ -1,0 +1,6 @@
+<app-sort-panel
+  *ngIf="isVisible"
+  [filterSettings]="filterSettings"
+  (setFilterSettings)="handleNewFilterSettings($event)">
+</app-sort-panel>
+<app-search-items-list [items]="(searchData | async)!"></app-search-items-list>

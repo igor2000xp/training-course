@@ -1,0 +1,22 @@
+<div class="details" *ngIf="item">
+  <button mat-raised-button color="primary" id="back-btn" (click)="goBack()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <div class="details-card">
+    <div class="details-img" style="background-image: url({{item.snippet.thumbnails.maxres.url}})"></div>
+      <div class="details-info" [appBorderColorByDate]="item.snippet.publishedAt">
+        <div class="details-title">
+          <h3>{{ item.snippet.title }}</h3>
+            <span class="details-time">{{publishTime.toDateString()}}</span>
+          </div>
+          <div class="details-description">
+            <h4>Description:</h4>
+              <p>{{ item.snippet.description.slice(0, 250) }}</p>
+          </div>
+          <div class="details-statistics">
+            <app-item-stats *ngFor="let stat of statisticsMap" [value]="stat.value" [icon]="stat.icon">
+            </app-item-stats>
+          </div>
+      </div>
+  </div>
+</div>

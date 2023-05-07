@@ -1,0 +1,7 @@
+<div class="search-result-wrapper">
+  <div class="search-result">
+      <ng-template ngFor let-item [ngForOf]="items | filterCards: filterSettings">
+          <app-search-item [item]="item"></app-search-item>
+      </ng-template>
+  </div>
+</div>

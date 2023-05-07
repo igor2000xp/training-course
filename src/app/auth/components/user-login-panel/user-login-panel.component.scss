@@ -1,0 +1,25 @@
+@import '../../../../themes/variables.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 80px;
+  color: #929292;
+}
+
+#user-btn {
+  background-color: white;
+  border-radius: 15%;
+  cursor: pointer;
+
+  &:active {
+    background-color: rgba($primary-color, 0.2);
+  }
+}
+
+#logout-btn {
+  height: 26px;
+  box-shadow: none;
+}

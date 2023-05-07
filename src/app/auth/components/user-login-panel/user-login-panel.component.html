@@ -1,0 +1,3 @@
+<img src="../../../assets/icons/user.svg" id="user-btn" (click)="onIconClick()">
+<span>{{_email ? _email : 'Log in'}}</span>
+<button *ngIf="_isAuth" color="primary" mat-raised-button id="logout-btn" (click)="onLogOut()">Log out</button>

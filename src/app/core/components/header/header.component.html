@@ -1,0 +1,17 @@
+<div class="controls">
+  <div class="control-panel">
+      <img class="search-logo" src="../../../assets/icons/logo.svg">
+      <div class="search">
+        <input
+        id="main-search-input"
+        type="text"
+        placeholder="search"
+        mat-input [formControl]="searchField"
+        (input)="setEmptyKeyWord()"/>
+        <button color="primary" mat-raised-button id="setting-btn" (click)="toggleFilters()">
+          <img src="../../../assets/icons/set.svg">
+        </button>
+      </div>
+    <app-user-login-panel [_isAuth]="_isAuth" [_email]="_email"></app-user-login-panel>
+  </div>
+</div>
