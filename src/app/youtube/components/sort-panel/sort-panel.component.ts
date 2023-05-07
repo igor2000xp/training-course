@@ -47,5 +47,3 @@ export class SortPanelComponent implements OnInit {
     this.filterSettingsService.changeKeyWord(keyWord);
   }
 }
-
-// export default SortPanelComponent;

@@ -1,7 +1,7 @@
 import { IItem } from './search-item.model';
 
 export interface IResponse {
-  [x: string]: any;
+  [x: string]: unknown;
   kind: string;
   etag: string;
   pageInfo: IPageInfo;

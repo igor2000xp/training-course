@@ -11,9 +11,9 @@ export class YoutubeApiInterceptor implements HttpInterceptor {
   BASE_URL = 'https://www.googleapis.com/youtube/v3';
 
   intercept(
-    req: HttpRequest<any>,
+    req: HttpRequest<unknown>,
     next: HttpHandler
-  ): Observable<HttpEvent<any>> {
+  ): Observable<HttpEvent<unknown>> {
     const cloned = req.clone({
       url: this.BASE_URL + req.url,
       params: req.params.append(

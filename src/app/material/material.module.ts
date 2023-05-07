@@ -10,5 +10,3 @@ const materialComponents: Array<object> = [MatButtonModule, MatIconModule];
   exports: [materialComponents],
 })
 export class MaterialModule {}
-
-// export default MaterialModule;
