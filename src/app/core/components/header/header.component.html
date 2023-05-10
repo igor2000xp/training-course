@@ -1,6 +1,6 @@
 <div class="controls">
   <div class="control-panel">
-      <img class="search-logo" src="../../../assets/icons/logo.svg">
+      <img class="search-logo" src="../../../assets/icons/logo.svg" alt="logo">
       <div class="search">
         <input
         id="main-search-input"
@@ -9,7 +9,7 @@
         mat-input [formControl]="searchField"
         (input)="setEmptyKeyWord()"/>
         <button color="primary" mat-raised-button id="setting-btn" (click)="toggleFilters()">
-          <img src="../../../assets/icons/set.svg">
+          <img src="../../../assets/icons/set.svg" alt="tunes bar">
         </button>
       </div>
     <app-user-login-panel [_isAuth]="_isAuth" [_email]="_email"></app-user-login-panel>
